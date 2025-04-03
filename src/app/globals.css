@@ -14,6 +14,9 @@
   --font-display: 'Heebo', 'Rubik', sans-serif;
   --font-body: 'Assistant', sans-serif;
   --shadow-custom: 0 10px 30px rgba(155, 120, 111, 0.1);
+
+  --font-rubik: 'Rubik', sans-serif;
+  --transition-speed: 0.3s;
 }
 
 body {
