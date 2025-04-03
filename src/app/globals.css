@@ -8,6 +8,8 @@
   --background-end-rgb: 255, 255, 255;
   --primary-color: #D4A5A5;
   --secondary-color: #9B786F;
+
+  --font-heebo: 'Heebo', sans-serif;
 }
 
 body {
