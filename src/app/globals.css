@@ -17,6 +17,11 @@
 
   --font-rubik: 'Rubik', sans-serif;
   --transition-speed: 0.3s;
+
+  --font-family-main: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --animation-duration: 0.3s;
+  --calendar-border-radius: 0.5rem;
+  --input-focus-shadow: 0 0 0 3px rgba(212, 165, 165, 0.3);
 }
 
 body {
