@@ -22,6 +22,8 @@
   --animation-duration: 0.3s;
   --calendar-border-radius: 0.5rem;
   --input-focus-shadow: 0 0 0 3px rgba(212, 165, 165, 0.3);
+
+  --font-family-primary: 'Heebo', 'Rubik', sans-serif;
 }
 
 body {
