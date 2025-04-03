@@ -14,6 +14,12 @@ module.exports = {
         primary-dark: "#C89292"
       ,
         light-beige: "#FAF6F2"
+      ,
+        primary-light: "#D4A5A5"
+      ,
+        secondary-light: "#9B786F"
+      ,
+        secondary-dark: "#7D5F58"
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
