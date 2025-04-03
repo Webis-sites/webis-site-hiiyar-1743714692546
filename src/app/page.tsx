@@ -14,11 +14,6 @@ import FooterSection from '../components/FooterSection';
 export default function HomePage() {
   return (
     <div className="flex min-h-screen flex-col">
-      <Hero 
-        title="hiiyar" 
-        subtitle="בית קפה" 
-      />
-      
       <main className="flex-1 container mx-auto px-4 py-8">
         {/* כאן יתווספו הקומפוננטות שייווצרו על ידי המחולל */}
         <HeroSection />

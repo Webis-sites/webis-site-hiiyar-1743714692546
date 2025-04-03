@@ -2,11 +2,9 @@
 
 import React, { useState } from 'react';
 import { Calendar } from 'react-calendar';
-import 'react-calendar/dist/Calendar.css';
 import { TimePicker } from 'react-time-picker';
-import 'react-time-picker/dist/TimePicker.css';
-import 'react-clock/dist/Clock.css';
 import { motion } from 'framer-motion';
+import './custom-calendar.css';
 
 type BookingFormData = {
   name: string;
@@ -14,7 +12,7 @@ type BookingFormData = {
   email: string;
   message: string;
   date: Date | null;
-  time: string;
+  time: string | null;
 };
 
 const BookingSystem: React.FC = () => {
@@ -35,22 +33,6 @@ const BookingSystem: React.FC = () => {
     setFormData((prev) => ({
       ...prev,
       [name]: value,
-    }));
-  };
-
-  const handleDateChange = (date: Date | Date[]) => {
-    if (date instanceof Date) {
-      setFormData((prev) => ({
-        ...prev,
-        date,
-      }));
-    }
-  };
-
-  const handleTimeChange = (time: string) => {
-    setFormData((prev) => ({
-      ...prev,
-      time: time || '12:00',
     }));
   };
 
@@ -169,7 +151,14 @@ const BookingSystem: React.FC = () => {
               <label className="block text-gray-700 font-medium mb-2">תאריך</label>
               <div className="calendar-wrapper border border-gray-300 rounded-md overflow-hidden">
                 <Calendar
-                  onChange={handleDateChange}
+                  onChange={(value) => {
+                    if (value instanceof Date) {
+                      setFormData((prev) => ({
+                        ...prev,
+                        date: value,
+                      }));
+                    }
+                  }}
                   value={formData.date}
                   minDate={new Date()}
                   className="booking-calendar"
@@ -181,7 +170,12 @@ const BookingSystem: React.FC = () => {
               <label className="block text-gray-700 font-medium mb-2">שעה</label>
               <div className="time-picker-wrapper border border-gray-300 rounded-md p-4">
                 <TimePicker
-                  onChange={handleTimeChange}
+                  onChange={(value) => {
+                    setFormData((prev) => ({
+                      ...prev,
+                      time: value || '12:00',
+                    }));
+                  }}
                   value={formData.time}
                   clearIcon={null}
                   clockIcon={null}

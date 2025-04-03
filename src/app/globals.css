@@ -3,41 +3,66 @@
 @tailwind utilities;
 
 :root {
+  /* צבעים */
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
   --primary-color: #D4A5A5;
   --secondary-color: #9B786F;
-
+  --primary-dark: #C89292;
+  --secondary-dark: #7D5F58;
+  --light-beige: #FAF6F2;
+  
+  /* גופנים */
   --font-heebo: 'Heebo', sans-serif;
-
-  --font-display: 'Heebo', 'Rubik', sans-serif;
-  --font-body: 'Assistant', sans-serif;
-  --shadow-custom: 0 10px 30px rgba(155, 120, 111, 0.1);
-
   --font-rubik: 'Rubik', sans-serif;
+  --font-body: 'Assistant', sans-serif;
+  
+  /* הגדרות עיצוב */
+  --shadow-custom: 0 10px 30px rgba(155, 120, 111, 0.1);
   --transition-speed: 0.3s;
-
-  --font-family-main: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   --animation-duration: 0.3s;
   --calendar-border-radius: 0.5rem;
   --input-focus-shadow: 0 0 0 3px rgba(212, 165, 165, 0.3);
+}
 
-  --font-family-primary: 'Heebo', 'Rubik', sans-serif;
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: white;
+  font-family: var(--font-body, system-ui, sans-serif);
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  
+  .rtl {
+    direction: rtl;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .full-height {
+    height: 100%;
   }
 }

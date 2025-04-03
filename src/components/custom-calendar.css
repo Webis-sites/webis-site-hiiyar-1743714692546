@@ -1,0 +1,162 @@
+/* קובץ CSS מקומי שמחליף את הגדרות CSS של react-calendar ו-react-clock */
+
+.react-calendar {
+  width: 100%;
+  max-width: 100%;
+  background: white;
+  border: 1px solid #dadada;
+  font-family: var(--font-body);
+  line-height: 1.125em;
+  border-radius: var(--calendar-border-radius);
+  direction: ltr;
+}
+
+.react-calendar button {
+  margin: 0;
+  border: 0;
+  outline: none;
+  padding: 8px;
+}
+
+.react-calendar button:enabled:hover {
+  cursor: pointer;
+  background-color: #e6e6e6;
+}
+
+.react-calendar__navigation {
+  display: flex;
+  height: 44px;
+  margin-bottom: 1em;
+}
+
+.react-calendar__navigation button {
+  min-width: 44px;
+  background: none;
+}
+
+.react-calendar__month-view__weekdays {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  padding: 8px;
+}
+
+.react-calendar__month-view__days__day--weekend {
+  color: #d10000;
+}
+
+.react-calendar__month-view__days__day--neighboringMonth {
+  color: #757575;
+}
+
+.react-calendar__tile {
+  max-width: 100%;
+  padding: 10px 6.6667px;
+  background: none;
+  text-align: center;
+  line-height: 16px;
+}
+
+.react-calendar__tile--now {
+  background: #ffff76;
+}
+
+.react-calendar__tile--active {
+  background: var(--primary-color, #D4A5A5);
+  color: white;
+}
+
+/* CSS for TimePicker */
+.react-time-picker {
+  display: inline-flex;
+  position: relative;
+  direction: ltr;
+}
+
+.react-time-picker__wrapper {
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 0;
+  border: 1px solid #dadada;
+  border-radius: 4px;
+}
+
+.react-time-picker__inputGroup {
+  min-width: calc(4ch + 0.54em);
+  flex-grow: 1;
+  padding: 0 2px;
+  display: flex;
+  align-items: center;
+}
+
+.react-time-picker__inputGroup__input {
+  min-width: 0.54em;
+  height: 100%;
+  padding: 0 1px;
+  border: 0;
+  background: none;
+  font: inherit;
+  box-sizing: content-box;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.react-time-picker__inputGroup__input::-webkit-outer-spin-button,
+.react-time-picker__inputGroup__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.react-time-picker__inputGroup__divider {
+  padding: 1px 0;
+  white-space: pre;
+}
+
+.react-time-picker__inputGroup__leadingZero {
+  padding: 0;
+}
+
+/* Clock styles */
+.react-clock {
+  display: block;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.react-clock__face {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 1px solid #dadada;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.react-clock__hand {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  right: 50%;
+  background-color: #333;
+}
+
+.booking-calendar .react-calendar__tile--active,
+.booking-calendar .react-calendar__tile--active:enabled:hover,
+.booking-calendar .react-calendar__tile--active:enabled:focus {
+  background: var(--primary-color);
+}
+
+.booking-time-picker .react-time-picker__wrapper {
+  border: none;
+  font-size: 1.1rem;
+} 

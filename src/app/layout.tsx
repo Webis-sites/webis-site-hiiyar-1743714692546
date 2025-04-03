@@ -1,12 +1,27 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import './globals.css';
+import { Heebo, Rubik, Assistant } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'] });
+const heebo = Heebo({
+  subsets: ['hebrew', 'latin'],
+  display: 'swap',
+  variable: '--font-heebo',
+});
 
-export const metadata: Metadata = {
-  title: 'hiiyar',
-  description: 'אנחנו בית קפה מוביל בתחום הבריאות עם ניסיון של שנים רבות. אנחנו מתמחים במתן שירות מקצועי ואיכותי ללקוחותינו.',
+const rubik = Rubik({
+  subsets: ['hebrew', 'latin'],
+  display: 'swap',
+  variable: '--font-rubik',
+});
+
+const assistant = Assistant({
+  subsets: ['hebrew', 'latin'],
+  display: 'swap',
+  variable: '--font-assistant',
+});
+
+export const metadata = {
+  title: 'hiiyar | בית קפה',
+  description: 'בית קפה איכותי עם מגוון מאכלים ומשקאות מעולים',
 };
 
 export default function RootLayout({
@@ -15,15 +30,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="he" dir="rtl">
-      <head>
-        <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#D4A5A5" />
-      </head>
-      <body className={inter.className}>
-        <main className="min-h-screen">
-          {children}
-        </main>
+    <html lang="he" dir="rtl" className={`${heebo.variable} ${rubik.variable} ${assistant.variable}`}>
+      <body className="min-h-screen w-full">
+        {children}
       </body>
     </html>
   );
