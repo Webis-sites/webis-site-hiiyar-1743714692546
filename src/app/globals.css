@@ -10,6 +10,10 @@
   --secondary-color: #9B786F;
 
   --font-heebo: 'Heebo', sans-serif;
+
+  --font-display: 'Heebo', 'Rubik', sans-serif;
+  --font-body: 'Assistant', sans-serif;
+  --shadow-custom: 0 10px 30px rgba(155, 120, 111, 0.1);
 }
 
 body {
