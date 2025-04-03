@@ -5,9 +5,9 @@ import { motion } from 'framer-motion';
 
 const HeroSection: React.FC = () => {
   return (
-    <div className="relative h-screen flex items-center justify-center overflow-hidden">
+    <div className="w-full relative h-screen flex items-center justify-center overflow-hidden">
       {/* תמונת רקע */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 w-full">
         <img 
           src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" 
           alt="בית קפה" 
@@ -17,7 +17,7 @@ const HeroSection: React.FC = () => {
       </div>
       
       {/* תוכן */}
-      <div className="relative z-10 text-center px-4">
+      <div className="relative z-10 text-center px-4 w-full max-w-6xl mx-auto">
         <motion.h1 
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}

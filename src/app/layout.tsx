@@ -22,6 +22,7 @@ const assistant = Assistant({
 export const metadata = {
   title: 'hiiyar | בית קפה',
   description: 'בית קפה איכותי עם מגוון מאכלים ומשקאות מעולים',
+  viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
 };
 
 export default function RootLayout({
@@ -30,9 +31,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="he" dir="rtl" className={`${heebo.variable} ${rubik.variable} ${assistant.variable}`}>
-      <body className="min-h-screen w-full">
-        {children}
+    <html lang="he" dir="rtl" className={`${heebo.variable} ${rubik.variable} ${assistant.variable} w-full`}>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+      </head>
+      <body className="min-h-screen w-full overflow-x-hidden">
+        <div className="w-full">
+          {children}
+        </div>
       </body>
     </html>
   );
