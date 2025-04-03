@@ -1,0 +1,6 @@
+# robots.txt for hiiyar
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://hiiyar.com/sitemap.xml
