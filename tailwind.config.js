@@ -10,6 +10,8 @@ module.exports = {
       colors: {
         primary: '#D4A5A5',
         secondary: '#9B786F',
+      ,
+        primary-dark: "#C89292"
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
